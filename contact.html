@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    
+*{
+  margin:0px;
+  padding: 0px;
+}
+.logo{
+  height:40px;
+  width:55px;
+  position:absolute;
+  margin-top:10px;
+  margin-top: 3px;
+  margin-left:5px;
+  
+  
+}
+.logo img{
+  height:40px;
+  width:55px;
+  border-radius:80%;
+  
+}
+  
+  
+  
+nav{
+  background-color:black;
+  width:100vw;
+  overflow:auto;
+}
+ul {
+  margin:0;
+  float:right;
+  list-style:none;
+  display:flex;
+  padding:14px;
+  
+}
+nav a{
+  color:white;
+  margin-left:10px;
+  padding:5px 5px;
+  text-decoration: none;
+  font-family:arial;
+  font-size:14px;
+  font-weight:bold;
+  transition-duration:0.5s;
+  
+} 
+nav a:hover{
+  color:#ff7200;
+  background-color:white;
+}
+#ama{
+  height:85vh;
+  width:100%;
+background-image:url("https://i.ibb.co/6B3Twf8/IMG-4719.jpg");
+ background-position:center;
+ background-size:cover;
+
+}
+
+#hi{
+  height:20vh;
+  width:80%;
+  color:black;
+  font-family: Arial; 
+  color:white;
+  margin-left:10px;
+
+  
+}
+#me{
+  color:#ff2700;
+}
+#me:hover{
+  font-size:45px;
+}
+
+.contact-section {
+  background-image:none;
+  padding:40px;
+  text-align: center;
+  height:30vh;
+  width:20vh;
+  margin-left:70px;
+  border:3px solid black;
+  box-shadow:5px 6px 5px gray;
+}
+.contact-section:hover{
+box-shadow:10px 10px 10px  10px ghostwhite;
+}
+
+.contact-section h2 {
+  color:#fff;
+  margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color:gray;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: dodgerblue;
+}
+.box{
+  height:auto;
+  width:100%;
+  color:white;
+  margin-top:60px;
+  align-items:center;
+  justify-content:center;
+  margin-left:18px;
+}
+#hya{
+  text-align:center;
+  color:#ff2700;
+}
+#hya:hover{
+  font-size:40px;
+}
+
+
+    
+    
+    
+  </style>
+</head> 
+<body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="https://i.ibb.co/k5vgYpw/IMG-4688.jpg" alt="image">
+        </div>
+        <ul>
+
+             <li><a href="index.html">Home</a> </li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="contact.html">Contact</a></li>
+             <li><a href="skill.html">Skill</a></li>
+             <li><a href="myservice.html">Service</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="ama">
+    
+    <div id="hi"> 
+    <br>
+    <h1 id="me"> Contact Me</h1>
+    <p> If youv'e got any question about web development.Please fill out the short form below to drop me an email and contact me promise to grt back to you in lighting speed.</p>
+    </div>
+    
+    <div class="contact-section">
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+
+<div class="box">
+  <h2 id="hya">who am I</h2>
+ <p>I am a web desiner and software developer.If you need any help, you will contact me easily...</p> 
+</div>
+</div>
+    </main>
+</body>
+
+</html>

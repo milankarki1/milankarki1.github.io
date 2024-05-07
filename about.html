@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> About page</title>
+  <style>
+    
+*{
+margin:0px;
+padding: 0px;
+}
+.logo{
+height:40px;
+width:55px;
+position:absolute;
+margin-top:10px;
+margin-top: 3px;
+margin-left:5px;
+
+
+}
+.logo img{
+height:40px;
+width:55px;
+border-radius:80%;
+
+}
+
+
+
+nav{
+background-color:black;
+width:100%;
+overflow:auto;
+}
+ul {
+margin:0;
+float:right;
+list-style:none;
+display:flex;
+padding:14px;
+
+}
+nav a{
+color:white;
+margin-left:10px;
+padding:5px 5px;
+text-decoration: none;
+font-family:arial;
+font-size:14px;
+font-weight:bold;
+transition-duration:0.5s;
+
+}
+nav a:hover{
+color:#ff7200;
+background-color:white;
+}
+
+.boxabout{
+width:100%;
+height:45vh;
+display:flex;
+background-image:url("https://i.ibb.co/z5k9NDg/IMG-4718.png");
+background-position:center;
+background-repeat:repeat;
+}
+.boxtext{
+height:40vh;
+width:60vw;
+margin-top:10px;
+padding:18px;
+text-align:justify;
+color:white;
+
+
+
+
+}
+#maya{
+color:#ff2700;
+}
+#maya:hover{
+font-size:40px;
+text-decoration:underline;
+}
+span{
+color:#ff2700;
+}
+.boximg{
+height:20vh;
+width:40%;
+margin-top:100px;
+border:3px solid black;
+border-radius: 20px;
+box-shadow: 10px 10px 10px 10px lightgray;
+margin-right: 5px;
+position:relative;
+animation:2s hello alternate infie;
+
+}
+.boximg:hover{
+position:relative;
+animation:1s hello alternate infinite;
+
+}
+
+@keyframes hello{
+from{
+top:-30px;
+}
+to{
+top:20px;
+}
+}
+.boximg img{
+border-radius:20px;
+}
+.image-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 10px;
+
+}
+.image-grid img {
+width:100%; /* Makes images fill the cell */
+height: auto; /* Keeps the aspect ratio */
+}
+.mainho{
+width:100%;
+height:40vh;
+background-image:url("https://i.ibb.co/z5k9NDg/IMG-4718.png");
+
+
+}
+.hello{
+border:1px solid gold;
+}
+.hello:hover{
+transform:scale(1.5,1.5);
+box-shadow:5px 5px 5px gray;
+}
+.mausam{
+margin:10px;
+}
+
+
+    
+    
+    
+    
+  </style>
+  
+</head>
+
+<body>
+  <header>
+    
+         <nav>
+           <div class="logo">
+             <img src="https://i.ibb.co/k5vgYpw/IMG-4688.jpg" alt="image">
+           </div>
+           <ul>
+             
+             <li><a href="index.html">Home</a> </li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="contact.html">Contact</a></li>
+             <li><a href="skill.html">Skill</a></li>
+             <li><a href="myservice.html">Service</a></li>
+            
+           </u>
+         </nav>
+  </header>
+  <main>
+    
+    
+<div class="boxabout">
+  <div class="boxtext">
+    
+    <h2 id="maya"> <marquee> ABOUT ME</marquee></h2>
+    <h3>I am <span>web developer</span> from Nepal.</h3>
+    <p>I enjoy taking complex problems and runnung them in simple and beautiful interface. I have completed my school education from Shree Sarada secondary School pokhari. I am doing Bachelor in IT in Sukuna Multiple Campus.</p>
+    <br>
+    <h3> <span>Some Images:</span></h3>
+      
+    
+  </div>
+  <div class="boximg">
+    <img src="https://i.ibb.co/K5cR1Yt/IMG-4770.png"height="160px" width="140px  " alt="image">
+  </div>
+</div>  
+  <div class="mainho">
+<div class="image-grid">
+  <img src="https://i.ibb.co/XYtmNnJ/IMG-3410.jpg" class="hello" alt="Image 1">
+  <img src="https://i.ibb.co/f49h4Rq/IMG-4620.jpg"class="hello"alt="Image 2">
+  <img src="https://i.ibb.co/C1Fx89r/IMG-4518.jpg"class="hello"alt="Image 3">
+  <img src="https://i.ibb.co/VtR8xWx/IMG-1063.jpg"class="hello"alt="Image 4">
+  <img src="https://i.ibb.co/VtR8xWx/IMG-1063.jpg"class="hello"alt="Image 5">
+  <img src="https://i.ibb.co/VtR8xWx/IMG-1063.jpg"class="hello"alt="Image 6">
+  <img src="https://i.ibb.co/VtR8xWx/IMG-1063.jpg"class="hello"alt="Image 7">
+  <img src="https://i.ibb.co/VtR8xWx/IMG-1063.jpg"class="hello"alt="Image 8">
+</div>
+
+<div class="mausam"><h2><span><center>Thank you eveyone !!</center></span></h2></div>
+</div>
+
+</main>
+
+</body>
+
+</html>
+
