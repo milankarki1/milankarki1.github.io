@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height:70vh;
+          background-color: #f4f4f4;
+          font-family: Arial, sans-serif;
+          margin: 0; /* Ensure no default margin */
+      }
+
+      .calculator {
+          background-color:black;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px 0px #000;
+          width: 300px; /* Adjusted width to better fit buttons */
+      }
+
+      #display {
+          width:95%;
+          height: 45px;
+          background-color:green;
+          color:white;
+          text-align: right;
+          font-size: 24px;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          margin-bottom: 10px;
+      }
+
+      .buttons {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 10px;
+      }
+
+      button {
+          height: 50px;
+          background-color: #4A90E2;
+          color:white;
+          font-size: 18px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          width: 100%; /* Ensure buttons take full grid cell width */
+      }
+
+      button:hover {
+          background-color: #3cb5c8;
+          transform:scale(1.4,1.4);
+          transition:0.3s ease-out;
+      }
+
+      /* Ensure responsive design */
+      @media (max-width: 400px) {
+          .calculator {
+              width: 100%;
+              padding: 10px;
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <!-- Number Buttons -->
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="appendOperator('/')">/</button>
+            
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="appendOperator('*')">*</button>
+            
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="appendOperator('-')">-</button>
+            
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendDecimal()">.</button>
+           
+          
+            <button onclick="clearDisplay()">C</button>
+           
+            <button onclick="appendOperator('+')">+</button>
+
+            <!-- Scientific Functions -->
+            
+            <button onclick="calculateSin()">sin</button>
+
+            <button onclick="calculateSqrt()">√</button>
+            <button onclick="calculatePower()">x²</button>
+            
+            
+             <button onclick="calculate()">=</button>
+            
+            <button onclick="calculateCos()">cos</button>
+            <button onclick="calculateTan()">tan</button>
+            <button onclick="calculateLog()">log</button>
+        </div>
+    </div>
+    <script>
+        let displayValue = ''; // Stores the current display value
+
+        // Append number to the display
+        function appendNumber(number) {
+            displayValue += number;
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Append operator to the display
+        function appendOperator(operator) {
+            displayValue += operator;
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Append decimal point
+        function appendDecimal() {
+            if (!displayValue.includes('.')) {
+                displayValue += '.';
+            }
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Clear the display
+        function clearDisplay() {
+            displayValue = '';
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Perform calculation
+        function calculate() {
+            try {
+                displayValue = eval(displayValue);
+                document.getElementById('display').value = displayValue;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+
+        // Calculate square root
+        function calculateSqrt() {
+            displayValue = Math.sqrt(eval(displayValue));
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Calculate power (square)
+        function calculatePower() {
+            displayValue = Math.pow(eval(displayValue), 2);
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Calculate sine
+        function calculateSin() {
+            displayValue = Math.sin(eval(displayValue));
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Calculate cosine
+        function calculateCos() {
+            displayValue = Math.cos(eval(displayValue));
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Calculate tangent
+        function calculateTan() {
+            displayValue = Math.tan(eval(displayValue));
+            document.getElementById('display').value = displayValue;
+        }
+
+        // Calculate logarithm (base 10)
+        function calculateLog() {
+            displayValue = Math.log10(eval(displayValue));
+            document.getElementById('display').value = displayValue;
+        }
+    </script>
+
+  
+      
+
+</body>
+</html>
